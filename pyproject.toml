@@ -1,0 +1,10 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lorenz-shred"
+version = "0.1.0"
+description = "Lorenz + PySHRED demo with ProjectedLSTM and SINDy forecaster"
+requires-python = ">=3.9"
+dependencies = []

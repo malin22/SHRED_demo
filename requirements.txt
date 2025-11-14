@@ -1,0 +1,7 @@
+numpy
+scipy
+matplotlib
+scikit-learn
+torch
+pysindy
+git+https://github.com/pyshred-dev/pyshred.git

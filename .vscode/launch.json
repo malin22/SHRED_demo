@@ -1,0 +1,54 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Train Lorenz (PySHRED)",
+      "type": "python",
+      "request": "launch",
+      "module": "lorenz_shred.cli",
+      "args": [
+        "train",
+        "--data",
+        "data/lorenz.npy",
+        "--epochs",
+        "50",
+        "--poly-order",
+        "3",
+        "--proj-dim",
+        "4"
+      ],
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true
+    },
+    {
+      "name": "Gen Data",
+      "type": "python",
+      "request": "launch",
+      "module": "lorenz_shred.cli",
+      "args": [
+        "gen-data",
+        "--T",
+        "50.0",
+        "--dt",
+        "0.01",
+        "--out",
+        "data/lorenz.npy"
+      ],
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true
+    },
+    {
+      "name": "Eval & Plot",
+      "type": "python",
+      "request": "launch",
+      "module": "lorenz_shred.cli",
+      "args": [
+        "plot",
+        "--data",
+        "data/lorenz.npy"
+      ],
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true
+    }
+  ]
+}
