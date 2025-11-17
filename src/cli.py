@@ -1,7 +1,7 @@
 
 import argparse, os, numpy as np
 from .generate_data import generate_lorenz, save_numpy, load_numpy
-from .train import train as train_fn
+from .train_shred import train as train_fn
 from .plotting import make_all_plots
 from pyshred import SHREDEngine
 
