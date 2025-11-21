@@ -4,7 +4,6 @@ import numpy as np
 import pysindy as ps
 from pyshred import DataManager, SHRED, SHREDEngine, SINDy_Forecaster
 from model import ProjectedLSTM
-from sklearn.metrics import mean_squared_error
 import pdb
 
 def prepare_manager(data: np.ndarray, lags=50, train_size=0.8, val_size=0.1, test_size=0.1, seed=42):

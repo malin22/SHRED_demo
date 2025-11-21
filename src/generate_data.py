@@ -9,7 +9,7 @@ def lorenz(t, s, sigma=10.0, rho=28.0, beta=8/3):
     x, y, z = s
     return [sigma*(y-x), x*(rho-z) - y, x*y - beta*z]
 
-def generate(T=50, dt_sample=0.01):
+def generate(T=50, dt_sample=0.01, save_path="data/lorenz.npy"):
 
     # Simulation
     T = T
@@ -22,7 +22,8 @@ def generate(T=50, dt_sample=0.01):
     os.makedirs("data", exist_ok=True)
 
     # Speichere die Lorenz-Daten
-    np.save("data/lorenz.npy", data)
+    np.save(save_path, data)
+    return t, data
 
 
 def generate_noisy(
